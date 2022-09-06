@@ -1,0 +1,83 @@
+$position-values: fixed,
+absolute,
+relative,
+unset;
+
+@each $value in $position-values {
+    .position-#{$value} {
+        position: #{$value};
+    }
+}
+
+.position-top,
+.position-top-right,
+.position-top-left,
+.position-forced-top-right,
+.position-forced-top-left {
+    top: 0;
+}
+
+.position-bottom,
+.position-bottom-right,
+.position-bottom-left,
+.position-forced-bottom-right,
+.position-forced-bottom-left {
+    bottom: 0;
+}
+
+.position-left,
+.position-left,
+.position-forced-right,
+.position-forced-right,
+.position-center {
+    top: 50%;
+}
+
+.position-top,
+.position-bottom,
+.position-center {
+    left: 50%;
+}
+
+.position-top,
+.position-bottom {
+    transform: translateX(-50%);
+}
+
+.position-center {
+    transform: translate(-50%, -50%);
+}
+
+.position-left,
+.position-right,
+.position-forced-left,
+.position-forced-right {
+    transform: translateY(-50%);
+}
+
+@include dir {
+
+    .position-bottom-left,
+    .position-left,
+    .position-top-left {
+        #{$left}: 0;
+    }
+
+    .position-top-right,
+    .position-right,
+    .position-bottom-right {
+        #{$right}: 0;
+    }
+}
+
+.position-forced-bottom-left,
+.position-forced-left,
+.position-forced-top-left {
+    left: 0;
+}
+
+.position-forced-top-right,
+.position-forced-right,
+.position-forced-bottom-right {
+    right: 0;
+}

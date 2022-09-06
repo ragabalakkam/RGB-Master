@@ -1,0 +1,28 @@
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@for $i from 1 to 10 {
+    .flex-#{$i} {
+        flex: #{$i};
+    }
+}
+
+@include media {
+    .flex-column#{$breakpoint} {
+        flex-direction: column;
+    }
+
+    @each $index,
+    $val in $spacers {
+        .flex-gap#{$breakpoint}-#{$index} {
+            gap: root_prefix('spacer-#{$index}');
+        }
+    }
+
+    .flex-gap#{$breakpoint}-bs {
+        gap: 1.875rem;
+    }
+}

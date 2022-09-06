@@ -1,0 +1,15 @@
+@mixin dir {
+    $right: left !global;
+    $left: right !global;
+
+    html[dir="rtl"] {
+        @content;
+    }
+
+    $right: right !global;
+    $left: left !global;
+
+    html:not([dir="rtl"]) {
+        @content;
+    }
+}

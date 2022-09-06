@@ -1,0 +1,7 @@
+* {
+    transition: all var(--duration-med);
+}
+
+.transition-0 {
+    transition: none !important;
+}

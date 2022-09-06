@@ -1,0 +1,18 @@
+@function root_prefix($color-name) {
+    @return var(--#{$root-prefix}#{$color-name});
+}
+
+// get_var_name(#000) => var(--bs-black)
+
+@function get_color_name($color) {
+
+    @each $color-name,
+    $color-value in map_merge($theme-colors, $colors) {
+
+        @if($color-value==$color) {
+            @return root_prefix($color-name);
+        }
+    }
+
+    @return $color;
+}

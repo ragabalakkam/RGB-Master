@@ -1,0 +1,113 @@
+// stylelint-disable declaration-no-important
+
+// Margin and Padding
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $prop,
+        $abbrev in (margin: m, padding: p) {
+
+            @each $size,
+            $length in $spacers {
+                .#{$abbrev}#{$infix}-#{$size} {
+                    #{$prop}: root_prefix('spacer-#{$size}');
+                }
+
+                .#{$abbrev}t#{$infix}-#{$size},
+                .#{$abbrev}y#{$infix}-#{$size} {
+                    #{$prop}-top: root_prefix('spacer-#{$size}');
+                }
+
+                @include dir {
+
+                    .#{$abbrev}r#{$infix}-#{$size},
+                    .#{$abbrev}x#{$infix}-#{$size} {
+                        #{$prop}-#{$right}: root_prefix('spacer-#{$size}');
+                    }
+                }
+
+                .#{$abbrev}b#{$infix}-#{$size},
+                .#{$abbrev}y#{$infix}-#{$size} {
+                    #{$prop}-bottom: root_prefix('spacer-#{$size}');
+                }
+
+                @include dir {
+
+                    .#{$abbrev}l#{$infix}-#{$size},
+                    .#{$abbrev}x#{$infix}-#{$size} {
+                        #{$prop}-#{$left}: root_prefix('spacer-#{$size}');
+                    }
+                }
+            }
+        }
+
+        // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+        @each $size,
+        $length in $spacers {
+            @if $size !=0 {
+                .m#{$infix}-n#{$size} {
+                    margin: -$length;
+                }
+
+                .mt#{$infix}-n#{$size},
+                .my#{$infix}-n#{$size} {
+                    margin-top: -$length;
+                }
+
+                @include dir {
+
+                    .mr#{$infix}-n#{$size},
+                    .mx#{$infix}-n#{$size} {
+                        margin-#{$right}: -$length;
+                    }
+                }
+
+                .mb#{$infix}-n#{$size},
+                .my#{$infix}-n#{$size} {
+                    margin-bottom: -$length;
+                }
+
+                @include dir {
+
+                    .ml#{$infix}-n#{$size},
+                    .mx#{$infix}-n#{$size} {
+                        margin-#{$left}: -$length;
+                    }
+                }
+            }
+        }
+
+        // Some special margin utils
+        .m#{$infix}-auto {
+            margin: auto;
+        }
+
+        .mt#{$infix}-auto,
+        .my#{$infix}-auto {
+            margin-top: auto;
+        }
+
+        @include dir {
+
+            .mr#{$infix}-auto,
+            .mx#{$infix}-auto {
+                margin-#{$right}: auto;
+            }
+        }
+
+        .mb#{$infix}-auto,
+        .my#{$infix}-auto {
+            margin-bottom: auto;
+        }
+
+        @include dir {
+
+            .ml#{$infix}-auto,
+            .mx#{$infix}-auto {
+                margin-#{$left}: auto;
+            }
+        }
+    }
+}

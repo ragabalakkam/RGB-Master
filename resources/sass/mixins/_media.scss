@@ -1,0 +1,95 @@
+// $media-breakpoints: 576, 768, 992, 1200, 1400px;
+
+@mixin xs {
+    @content;
+
+    @media (max-width: 576px) {
+        $breakpoint: -xs !global;
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: 576px) and (max-width: 768px) {
+        $breakpoint: -sm-only !global;
+        @content;
+    }
+
+    @media (min-width: 576px) {
+        $breakpoint: -sm !global;
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 768px) and (max-width: 992px) {
+        $breakpoint: -md-only !global;
+        @content;
+    }
+
+    @media (min-width: 768px) {
+        $breakpoint: -md !global;
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 992px) and (max-width: 1200px) {
+        $breakpoint: -lg-only !global;
+        @content;
+    }
+
+    @media (min-width: 992px) {
+        $breakpoint: -lg !global;
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: 1200px) and (max-width: 1400px) {
+        $breakpoint: -xl-only !global;
+        @content;
+    }
+
+    @media (min-width: 1200px) {
+        $breakpoint: -xl !global;
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: 1400px) {
+        $breakpoint: -xxl !global;
+        @content;
+    }
+}
+
+@mixin media {
+
+    $breakpoint: '' !global;
+    @content;
+
+    @include xs {
+        @content;
+    }
+
+    @include sm {
+        @content;
+    }
+
+    @include md {
+        @content;
+    }
+
+    @include lg {
+        @content;
+    }
+
+    @include xl {
+        @content;
+    }
+
+    @include xxl {
+        @content;
+    }
+}

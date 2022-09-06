@@ -1,0 +1,32 @@
+$background-color: white;
+$foreground-color: black;
+$border-color: black;
+$thead-background-color: var(--bs-border);
+$thead-color: var(--bs-black);
+
+$font-family: 'Times New Roman', sans-serif;
+$font-size: 12px;
+
+$a4-width: 794px;
+$a4-height: 1120px; // 1123px
+$a4-padding: var(--bs-spacer-5);
+$a4-font-size: 12px;
+$a4-font-weight: 300;
+
+$roll-80-width: 410px;
+$roll-80-height: auto;
+$roll-80-padding: var(--bs-spacer-4);
+$roll-80-font-size: 18px;
+$roll-80-font-weight: 900;
+
+$roll-58-width: 298.5px;
+$roll-58-height: auto;
+$roll-58-padding: var(--bs-spacer-3);
+$roll-58-font-size: 15px;
+$roll-58-font-weight: 300;
+
+$table-padding: var(--bs-spacer-1) var(--bs-spacer-2);
+$table-margin: 0 0 var(--bs-spacer-2) 0;
+
+$dirs: top, right, bottom, left;
+$font-sizes: (sm, 0.65 em), (md, 0.85em), (lg, 1em), (xl, 1.2em), (xxl, 1.5em);

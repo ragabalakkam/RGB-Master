@@ -1,0 +1,1134 @@
+.printable-hidden {
+  position: absolute;
+  top: 102%;
+  left: 102%;
+}
+
+.printable-page {
+  background-color: white !important;
+  color: black !important;
+  font-family: "Times New Roman", sans-serif !important;
+  font-size: 12px !important;
+  counter-set: page;
+}
+
+.printable-page,
+.printable-page * {
+  transition: none !important;
+  box-sizing: border-box;
+}
+
+.printable-page p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.printable-page .border-top-dashed {
+  border-top: 1px dashed black !important;
+}
+
+.printable-page .border-bottom-dashed {
+  border-bottom: 1px dashed black !important;
+}
+
+.printable-page .border {
+  border: 1px solid var(--bs-black);
+}
+
+.printable-page .border-top {
+  border-top: 1px solid black;
+}
+
+.printable-page .border-right {
+  border-right: 1px solid black;
+}
+
+.printable-page .border-bottom {
+  border-bottom: 1px solid black;
+}
+
+.printable-page .border-left {
+  border-left: 1px solid black;
+}
+
+.printable-page .hr {
+  margin-bottom: var(--bs-spacer-4);
+  margin-top: var(--bs-spacer-4);
+}
+
+.printable-page .border-2px {
+  border-width: 2px !important;
+}
+
+.printable-page .rounded-sm {
+  border-radius: 0.2em;
+}
+
+.printable-page .rounded-md {
+  border-radius: 0.25em;
+}
+
+.printable-page .rounded-lg {
+  border-radius: 0.3em;
+}
+
+.printable-page .rounded-xl {
+  border-radius: 0.5em;
+}
+
+.printable-page .rounded-edges {
+  border-radius: 5em;
+}
+
+.printable-page.page-a4 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: var(--print-A4-width) !important;
+  height: var(--print-A4-height) !important;
+  font-size: 12px !important;
+  font-weight: 300 !important;
+}
+
+.printable-page.page-roll-80 {
+  width: var(--print-Roll-80-width) !important;
+  padding: var(--bs-spacer-4) !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+}
+
+.printable-page.page-roll-58 {
+  width: var(--print-Roll-58-width) !important;
+  padding: var(--bs-spacer-3) !important;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+}
+
+.printable-page.cut-after-page,
+.printable-page .cut-after-page {
+  page-break-after: always !important;
+  border-bottom: 1px dashed black !important;
+}
+
+.printable-page .nowrap {
+  white-space: nowrap;
+}
+
+.printable-page .border,
+.printable-page .border-left,
+.printable-page .border-right,
+.printable-page .border-top,
+.printable-page .border-bottom,
+.printable-page .table tr th,
+.printable-page .table tr td,
+.printable-page hr {
+  border-color: black !important;
+}
+
+.printable-page .table:not(.not-table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 var(--bs-spacer-2) 0;
+}
+
+.printable-page .table:not(.not-table) thead:not(.bg-none) {
+  background-color: var(--bs-border);
+  color: var(--bs-black);
+}
+
+.printable-page .table:not(.not-table) thead tr {
+  border-bottom: 2px solid black;
+}
+
+.printable-page .table:not(.not-table) tr th,
+.printable-page .table:not(.not-table) tr td {
+  border: 1px solid black;
+  padding: var(--bs-spacer-1) var(--bs-spacer-2);
+}
+
+.printable-page .table:not(.not-table).mb-0 {
+  margin: 0 !important;
+}
+
+.printable-page .table:not(.not-table).table-borderless > thead > tr > th,
+.printable-page .table:not(.not-table).table-borderless > thead > tr > td,
+.printable-page .table:not(.not-table).table-borderless > thead > tr,
+.printable-page .table:not(.not-table).table-borderless > tbody > tr > td,
+.printable-page .table:not(.not-table).table-borderless > tfoot > tr > td {
+  border: 0;
+}
+
+.printable-page .table:not(.not-table).p-0 > thead > tr > td,
+.printable-page .table:not(.not-table).p-0 > tbody > tr > td,
+.printable-page .table:not(.not-table).p-0 > tfoot > tr > td {
+  padding: 0 !important;
+}
+
+.printable-page .table-collapse {
+  border-collapse: collapse;
+}
+
+.printable-page .table td {
+  padding: unset;
+}
+
+.printable-page .font-sm {
+  font-size: 0.65 em !important;
+}
+
+.printable-page .font-md {
+  font-size: 0.85em !important;
+}
+
+.printable-page .font-lg {
+  font-size: 1em !important;
+}
+
+.printable-page .font-xl {
+  font-size: 1.2em !important;
+}
+
+.printable-page .font-xxl {
+  font-size: 1.5em !important;
+}
+
+.printable-page .fs-1 {
+  font-size: 0.25em !important;
+}
+
+.printable-page .fs-2 {
+  font-size: 0.5em !important;
+}
+
+.printable-page .fs-3 {
+  font-size: 0.75em !important;
+}
+
+.printable-page .fs-4 {
+  font-size: 1em !important;
+}
+
+.printable-page .fs-5 {
+  font-size: 1.25em !important;
+}
+
+.printable-page .fs-6 {
+  font-size: 1.5em !important;
+}
+
+.printable-page .fs-7 {
+  font-size: 1.75em !important;
+}
+
+.printable-page .fs-8 {
+  font-size: 2em !important;
+}
+
+.printable-page .font-300 {
+  font-weight: 300 !important;
+}
+
+.printable-page .font-600 {
+  font-weight: 600 !important;
+}
+
+.printable-page .font-900 {
+  font-weight: 900 !important;
+}
+
+.printable-page.standard-tax-invoice .table.products-table thead tr {
+  border-bottom: 2px solid black;
+}
+
+.printable-page.standard-tax-invoice .table.products-table tr {
+  text-align: center;
+}
+
+.printable-page.standard-tax-invoice .table.products-table tr th,
+.printable-page.standard-tax-invoice .table.products-table tr td {
+  vertical-align: middle;
+}
+
+.printable-page.standard-tax-invoice .table.products-table tr th:not(:nth-child(2)),
+.printable-page.standard-tax-invoice .table.products-table tr td:not(:nth-child(2)) {
+  width: 10%;
+}
+
+.printable-page.standard-tax-invoice .table.products-table tr th:last-child,
+.printable-page.standard-tax-invoice .table.products-table tr td:last-child {
+  width: 12%;
+}
+
+.printable-page.standard-tax-invoice .table.summary-table tr td:nth-child(1) {
+  width: 40%;
+}
+
+.printable-page.standard-tax-invoice .table.summary-table tr td:nth-child(3) {
+  width: 12%;
+  text-align: center;
+}
+
+.printable-page.simplified-tax-invoice {
+  font-weight: 900 !important;
+}
+
+.printable-page .w-max-content {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.printable-page .w-auto {
+  width: auto;
+}
+
+.printable-page .w-100 {
+  width: 100%;
+}
+
+.printable-page .vw-100 {
+  width: 100vw;
+}
+
+.printable-page .h-100 {
+  height: 100%;
+}
+
+.printable-page .vh-100 {
+  height: 100vh;
+}
+
+.printable-page .wd-30 {
+  width: 30px;
+}
+
+.printable-page .wd-60 {
+  width: 60px;
+}
+
+.printable-page .wd-85 {
+  width: 85px;
+}
+
+.printable-page .p-0,
+.printable-page .px-0,
+.printable-page .pr-0 {
+  padding-right: var(--bs-spacer-0);
+}
+
+.printable-page .p-0,
+.printable-page .px-0,
+.printable-page .pl-0 {
+  padding-left: var(--bs-spacer-0);
+}
+
+.printable-page .p-0,
+.printable-page .py-0,
+.printable-page .pb-0 {
+  padding-bottom: var(--bs-spacer-0);
+}
+
+.printable-page .p-0,
+.printable-page .py-0,
+.printable-page .pt-0 {
+  padding-top: var(--bs-spacer-0);
+}
+
+.printable-page .m-0,
+.printable-page .mx-0,
+.printable-page .mr-0 {
+  margin-right: var(--bs-spacer-0);
+}
+
+.printable-page .m-0,
+.printable-page .mx-0,
+.printable-page .ml-0 {
+  margin-left: var(--bs-spacer-0);
+}
+
+.printable-page .m-0,
+.printable-page .my-0,
+.printable-page .mb-0 {
+  margin-bottom: var(--bs-spacer-0);
+}
+
+.printable-page .m-0,
+.printable-page .my-0,
+.printable-page .mt-0 {
+  margin-top: var(--bs-spacer-0);
+}
+
+.printable-page .p-1,
+.printable-page .px-1,
+.printable-page .pr-1 {
+  padding-right: var(--bs-spacer-1);
+}
+
+.printable-page .p-1,
+.printable-page .px-1,
+.printable-page .pl-1 {
+  padding-left: var(--bs-spacer-1);
+}
+
+.printable-page .p-1,
+.printable-page .py-1,
+.printable-page .pb-1 {
+  padding-bottom: var(--bs-spacer-1);
+}
+
+.printable-page .p-1,
+.printable-page .py-1,
+.printable-page .pt-1 {
+  padding-top: var(--bs-spacer-1);
+}
+
+.printable-page .m-1,
+.printable-page .mx-1,
+.printable-page .mr-1 {
+  margin-right: var(--bs-spacer-1);
+}
+
+.printable-page .m-1,
+.printable-page .mx-1,
+.printable-page .ml-1 {
+  margin-left: var(--bs-spacer-1);
+}
+
+.printable-page .m-1,
+.printable-page .my-1,
+.printable-page .mb-1 {
+  margin-bottom: var(--bs-spacer-1);
+}
+
+.printable-page .m-1,
+.printable-page .my-1,
+.printable-page .mt-1 {
+  margin-top: var(--bs-spacer-1);
+}
+
+.printable-page .p-2,
+.printable-page .px-2,
+.printable-page .pr-2 {
+  padding-right: var(--bs-spacer-2);
+}
+
+.printable-page .p-2,
+.printable-page .px-2,
+.printable-page .pl-2 {
+  padding-left: var(--bs-spacer-2);
+}
+
+.printable-page .p-2,
+.printable-page .py-2,
+.printable-page .pb-2 {
+  padding-bottom: var(--bs-spacer-2);
+}
+
+.printable-page .p-2,
+.printable-page .py-2,
+.printable-page .pt-2 {
+  padding-top: var(--bs-spacer-2);
+}
+
+.printable-page .m-2,
+.printable-page .mx-2,
+.printable-page .mr-2 {
+  margin-right: var(--bs-spacer-2);
+}
+
+.printable-page .m-2,
+.printable-page .mx-2,
+.printable-page .ml-2 {
+  margin-left: var(--bs-spacer-2);
+}
+
+.printable-page .m-2,
+.printable-page .my-2,
+.printable-page .mb-2 {
+  margin-bottom: var(--bs-spacer-2);
+}
+
+.printable-page .m-2,
+.printable-page .my-2,
+.printable-page .mt-2 {
+  margin-top: var(--bs-spacer-2);
+}
+
+.printable-page .p-3,
+.printable-page .px-3,
+.printable-page .pr-3 {
+  padding-right: var(--bs-spacer-3);
+}
+
+.printable-page .p-3,
+.printable-page .px-3,
+.printable-page .pl-3 {
+  padding-left: var(--bs-spacer-3);
+}
+
+.printable-page .p-3,
+.printable-page .py-3,
+.printable-page .pb-3 {
+  padding-bottom: var(--bs-spacer-3);
+}
+
+.printable-page .p-3,
+.printable-page .py-3,
+.printable-page .pt-3 {
+  padding-top: var(--bs-spacer-3);
+}
+
+.printable-page .m-3,
+.printable-page .mx-3,
+.printable-page .mr-3 {
+  margin-right: var(--bs-spacer-3);
+}
+
+.printable-page .m-3,
+.printable-page .mx-3,
+.printable-page .ml-3 {
+  margin-left: var(--bs-spacer-3);
+}
+
+.printable-page .m-3,
+.printable-page .my-3,
+.printable-page .mb-3 {
+  margin-bottom: var(--bs-spacer-3);
+}
+
+.printable-page .m-3,
+.printable-page .my-3,
+.printable-page .mt-3 {
+  margin-top: var(--bs-spacer-3);
+}
+
+.printable-page .p-4,
+.printable-page .px-4,
+.printable-page .pr-4 {
+  padding-right: var(--bs-spacer-4);
+}
+
+.printable-page .p-4,
+.printable-page .px-4,
+.printable-page .pl-4 {
+  padding-left: var(--bs-spacer-4);
+}
+
+.printable-page .p-4,
+.printable-page .py-4,
+.printable-page .pb-4 {
+  padding-bottom: var(--bs-spacer-4);
+}
+
+.printable-page .p-4,
+.printable-page .py-4,
+.printable-page .pt-4 {
+  padding-top: var(--bs-spacer-4);
+}
+
+.printable-page .m-4,
+.printable-page .mx-4,
+.printable-page .mr-4 {
+  margin-right: var(--bs-spacer-4);
+}
+
+.printable-page .m-4,
+.printable-page .mx-4,
+.printable-page .ml-4 {
+  margin-left: var(--bs-spacer-4);
+}
+
+.printable-page .m-4,
+.printable-page .my-4,
+.printable-page .mb-4 {
+  margin-bottom: var(--bs-spacer-4);
+}
+
+.printable-page .m-4,
+.printable-page .my-4,
+.printable-page .mt-4 {
+  margin-top: var(--bs-spacer-4);
+}
+
+.printable-page .p-5,
+.printable-page .px-5,
+.printable-page .pr-5 {
+  padding-right: var(--bs-spacer-5);
+}
+
+.printable-page .p-5,
+.printable-page .px-5,
+.printable-page .pl-5 {
+  padding-left: var(--bs-spacer-5);
+}
+
+.printable-page .p-5,
+.printable-page .py-5,
+.printable-page .pb-5 {
+  padding-bottom: var(--bs-spacer-5);
+}
+
+.printable-page .p-5,
+.printable-page .py-5,
+.printable-page .pt-5 {
+  padding-top: var(--bs-spacer-5);
+}
+
+.printable-page .m-5,
+.printable-page .mx-5,
+.printable-page .mr-5 {
+  margin-right: var(--bs-spacer-5);
+}
+
+.printable-page .m-5,
+.printable-page .mx-5,
+.printable-page .ml-5 {
+  margin-left: var(--bs-spacer-5);
+}
+
+.printable-page .m-5,
+.printable-page .my-5,
+.printable-page .mb-5 {
+  margin-bottom: var(--bs-spacer-5);
+}
+
+.printable-page .m-5,
+.printable-page .my-5,
+.printable-page .mt-5 {
+  margin-top: var(--bs-spacer-5);
+}
+
+.printable-page .m-auto,
+.printable-page .mx-auto,
+.printable-page .mr-auto {
+  margin-right: auto;
+}
+
+.printable-page .m-auto,
+.printable-page .mx-auto,
+.printable-page .ml-auto {
+  margin-left: auto;
+}
+
+.printable-page .m-auto,
+.printable-page .my-auto,
+.printable-page .mb-auto {
+  margin-bottom: auto;
+}
+
+.printable-page .m-auto,
+.printable-page .my-auto,
+.printable-page .mt-auto {
+  margin-top: auto;
+}
+
+.printable-page .d-flex {
+  display: flex;
+}
+
+.printable-page .flex-column {
+  flex-direction: column;
+}
+
+.printable-page .align-items-center {
+  align-items: center;
+}
+
+.printable-page .flex-1 {
+  flex: 1;
+}
+
+.printable-page .flex-gap-1 {
+  gap: var(--bs-spacer-1);
+}
+
+.printable-page .flex-2 {
+  flex: 2;
+}
+
+.printable-page .flex-gap-2 {
+  gap: var(--bs-spacer-2);
+}
+
+.printable-page .flex-3 {
+  flex: 3;
+}
+
+.printable-page .flex-gap-3 {
+  gap: var(--bs-spacer-3);
+}
+
+.printable-page .flex-4 {
+  flex: 4;
+}
+
+.printable-page .flex-gap-4 {
+  gap: var(--bs-spacer-4);
+}
+
+.printable-page .flex-5 {
+  flex: 5;
+}
+
+.printable-page .flex-gap-5 {
+  gap: var(--bs-spacer-5);
+}
+
+.printable-page .bg-primary {
+  background-color: #3490dc;
+}
+
+.printable-page .bg-primary-1 {
+  background-color: rgba(52, 144, 220, 0.1);
+}
+
+.printable-page .bg-primary-2 {
+  background-color: rgba(52, 144, 220, 0.2);
+}
+
+.printable-page .bg-primary-3 {
+  background-color: rgba(52, 144, 220, 0.3);
+}
+
+.printable-page .bg-primary-4 {
+  background-color: rgba(52, 144, 220, 0.4);
+}
+
+.printable-page .bg-primary-5 {
+  background-color: rgba(52, 144, 220, 0.5);
+}
+
+.printable-page .bg-primary-6 {
+  background-color: rgba(52, 144, 220, 0.6);
+}
+
+.printable-page .bg-primary-7 {
+  background-color: rgba(52, 144, 220, 0.7);
+}
+
+.printable-page .bg-primary-8 {
+  background-color: rgba(52, 144, 220, 0.8);
+}
+
+.printable-page .bg-primary-9 {
+  background-color: rgba(52, 144, 220, 0.9);
+}
+
+.printable-page .bg-secondary {
+  background-color: #6c757d;
+}
+
+.printable-page .bg-secondary-1 {
+  background-color: rgba(108, 117, 125, 0.1);
+}
+
+.printable-page .bg-secondary-2 {
+  background-color: rgba(108, 117, 125, 0.2);
+}
+
+.printable-page .bg-secondary-3 {
+  background-color: rgba(108, 117, 125, 0.3);
+}
+
+.printable-page .bg-secondary-4 {
+  background-color: rgba(108, 117, 125, 0.4);
+}
+
+.printable-page .bg-secondary-5 {
+  background-color: rgba(108, 117, 125, 0.5);
+}
+
+.printable-page .bg-secondary-6 {
+  background-color: rgba(108, 117, 125, 0.6);
+}
+
+.printable-page .bg-secondary-7 {
+  background-color: rgba(108, 117, 125, 0.7);
+}
+
+.printable-page .bg-secondary-8 {
+  background-color: rgba(108, 117, 125, 0.8);
+}
+
+.printable-page .bg-secondary-9 {
+  background-color: rgba(108, 117, 125, 0.9);
+}
+
+.printable-page .bg-success {
+  background-color: #38c172;
+}
+
+.printable-page .bg-success-1 {
+  background-color: rgba(56, 193, 114, 0.1);
+}
+
+.printable-page .bg-success-2 {
+  background-color: rgba(56, 193, 114, 0.2);
+}
+
+.printable-page .bg-success-3 {
+  background-color: rgba(56, 193, 114, 0.3);
+}
+
+.printable-page .bg-success-4 {
+  background-color: rgba(56, 193, 114, 0.4);
+}
+
+.printable-page .bg-success-5 {
+  background-color: rgba(56, 193, 114, 0.5);
+}
+
+.printable-page .bg-success-6 {
+  background-color: rgba(56, 193, 114, 0.6);
+}
+
+.printable-page .bg-success-7 {
+  background-color: rgba(56, 193, 114, 0.7);
+}
+
+.printable-page .bg-success-8 {
+  background-color: rgba(56, 193, 114, 0.8);
+}
+
+.printable-page .bg-success-9 {
+  background-color: rgba(56, 193, 114, 0.9);
+}
+
+.printable-page .bg-info {
+  background-color: #6cb2eb;
+}
+
+.printable-page .bg-info-1 {
+  background-color: rgba(108, 178, 235, 0.1);
+}
+
+.printable-page .bg-info-2 {
+  background-color: rgba(108, 178, 235, 0.2);
+}
+
+.printable-page .bg-info-3 {
+  background-color: rgba(108, 178, 235, 0.3);
+}
+
+.printable-page .bg-info-4 {
+  background-color: rgba(108, 178, 235, 0.4);
+}
+
+.printable-page .bg-info-5 {
+  background-color: rgba(108, 178, 235, 0.5);
+}
+
+.printable-page .bg-info-6 {
+  background-color: rgba(108, 178, 235, 0.6);
+}
+
+.printable-page .bg-info-7 {
+  background-color: rgba(108, 178, 235, 0.7);
+}
+
+.printable-page .bg-info-8 {
+  background-color: rgba(108, 178, 235, 0.8);
+}
+
+.printable-page .bg-info-9 {
+  background-color: rgba(108, 178, 235, 0.9);
+}
+
+.printable-page .bg-warning {
+  background-color: #ffed4a;
+}
+
+.printable-page .bg-warning-1 {
+  background-color: rgba(255, 237, 74, 0.1);
+}
+
+.printable-page .bg-warning-2 {
+  background-color: rgba(255, 237, 74, 0.2);
+}
+
+.printable-page .bg-warning-3 {
+  background-color: rgba(255, 237, 74, 0.3);
+}
+
+.printable-page .bg-warning-4 {
+  background-color: rgba(255, 237, 74, 0.4);
+}
+
+.printable-page .bg-warning-5 {
+  background-color: rgba(255, 237, 74, 0.5);
+}
+
+.printable-page .bg-warning-6 {
+  background-color: rgba(255, 237, 74, 0.6);
+}
+
+.printable-page .bg-warning-7 {
+  background-color: rgba(255, 237, 74, 0.7);
+}
+
+.printable-page .bg-warning-8 {
+  background-color: rgba(255, 237, 74, 0.8);
+}
+
+.printable-page .bg-warning-9 {
+  background-color: rgba(255, 237, 74, 0.9);
+}
+
+.printable-page .bg-danger {
+  background-color: #e3342f;
+}
+
+.printable-page .bg-danger-1 {
+  background-color: rgba(227, 52, 47, 0.1);
+}
+
+.printable-page .bg-danger-2 {
+  background-color: rgba(227, 52, 47, 0.2);
+}
+
+.printable-page .bg-danger-3 {
+  background-color: rgba(227, 52, 47, 0.3);
+}
+
+.printable-page .bg-danger-4 {
+  background-color: rgba(227, 52, 47, 0.4);
+}
+
+.printable-page .bg-danger-5 {
+  background-color: rgba(227, 52, 47, 0.5);
+}
+
+.printable-page .bg-danger-6 {
+  background-color: rgba(227, 52, 47, 0.6);
+}
+
+.printable-page .bg-danger-7 {
+  background-color: rgba(227, 52, 47, 0.7);
+}
+
+.printable-page .bg-danger-8 {
+  background-color: rgba(227, 52, 47, 0.8);
+}
+
+.printable-page .bg-danger-9 {
+  background-color: rgba(227, 52, 47, 0.9);
+}
+
+.printable-page .bg-light {
+  background-color: #f8f9fa;
+}
+
+.printable-page .bg-light-1 {
+  background-color: rgba(248, 249, 250, 0.1);
+}
+
+.printable-page .bg-light-2 {
+  background-color: rgba(248, 249, 250, 0.2);
+}
+
+.printable-page .bg-light-3 {
+  background-color: rgba(248, 249, 250, 0.3);
+}
+
+.printable-page .bg-light-4 {
+  background-color: rgba(248, 249, 250, 0.4);
+}
+
+.printable-page .bg-light-5 {
+  background-color: rgba(248, 249, 250, 0.5);
+}
+
+.printable-page .bg-light-6 {
+  background-color: rgba(248, 249, 250, 0.6);
+}
+
+.printable-page .bg-light-7 {
+  background-color: rgba(248, 249, 250, 0.7);
+}
+
+.printable-page .bg-light-8 {
+  background-color: rgba(248, 249, 250, 0.8);
+}
+
+.printable-page .bg-light-9 {
+  background-color: rgba(248, 249, 250, 0.9);
+}
+
+.printable-page .bg-dark {
+  background-color: #343a40;
+}
+
+.printable-page .bg-dark-1 {
+  background-color: rgba(52, 58, 64, 0.1);
+}
+
+.printable-page .bg-dark-2 {
+  background-color: rgba(52, 58, 64, 0.2);
+}
+
+.printable-page .bg-dark-3 {
+  background-color: rgba(52, 58, 64, 0.3);
+}
+
+.printable-page .bg-dark-4 {
+  background-color: rgba(52, 58, 64, 0.4);
+}
+
+.printable-page .bg-dark-5 {
+  background-color: rgba(52, 58, 64, 0.5);
+}
+
+.printable-page .bg-dark-6 {
+  background-color: rgba(52, 58, 64, 0.6);
+}
+
+.printable-page .bg-dark-7 {
+  background-color: rgba(52, 58, 64, 0.7);
+}
+
+.printable-page .bg-dark-8 {
+  background-color: rgba(52, 58, 64, 0.8);
+}
+
+.printable-page .bg-dark-9 {
+  background-color: rgba(52, 58, 64, 0.9);
+}
+
+.printable-page .bg-none {
+  background-color: transparent;
+}
+
+.printable-page .bg-none-1 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.printable-page .bg-none-2 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.printable-page .bg-none-3 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.printable-page .bg-none-4 {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.printable-page .bg-none-5 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.printable-page .bg-none-6 {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.printable-page .bg-none-7 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.printable-page .bg-none-8 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.printable-page .bg-none-9 {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.printable-page .text-left {
+  text-align: left;
+}
+
+.printable-page .text-right {
+  text-align: right;
+}
+
+.printable-page .text-center {
+  text-align: center;
+}
+
+.printable-page #page-footer {
+  counter-increment: page;
+}
+
+.printable-page #page-footer::after {
+  content: counter(page);
+}
+
+.printable-page.standard-tax-invoice {
+  padding-left: var(--print-standard-tax-invoice-padding-left) !important;
+  padding-right: var(--print-standard-tax-invoice-padding-right) !important;
+  font-family: var(--print-standard-tax-invoice-font-family) !important;
+  font-size: var(--print-standard-tax-invoice-font-size) !important;
+  font-weight: var(--print-standard-tax-invoice-font-weight) !important;
+  background-color: var(--print-standard-tax-invoice-background-color) !important;
+  border-color: var(--print-standard-tax-invoice-border-color) !important;
+  color: var(--print-standard-tax-invoice-color) !important;
+}
+
+.printable-page.simplified-tax-invoice {
+  padding-left: var(--print-simplified-tax-invoice-padding-left) !important;
+  padding-right: var(--print-simplified-tax-invoice-padding-right) !important;
+  font-family: var(--print-simplified-tax-invoice-font-family) !important;
+  font-size: var(--print-simplified-tax-invoice-font-size) !important;
+  font-weight: var(--print-simplified-tax-invoice-font-weight) !important;
+  background-color: var(--print-simplified-tax-invoice-background-color) !important;
+  border-color: var(--print-simplified-tax-invoice-border-color) !important;
+  color: var(--print-simplified-tax-invoice-color) !important;
+}
+
+.printable-page.reports {
+  padding-left: var(--print-reports-padding-left) !important;
+  padding-right: var(--print-reports-padding-right) !important;
+  font-family: var(--print-reports-font-family) !important;
+  font-size: var(--print-reports-font-size) !important;
+  font-weight: var(--print-reports-font-weight) !important;
+  background-color: var(--print-reports-background-color) !important;
+  border-color: var(--print-reports-border-color) !important;
+  color: var(--print-reports-color) !important;
+}
+
+@media print {
+  .invoice .action-buttons,
+  .standard-tax-invoice .action-buttons,
+  .simplified-tax-invoice .action-buttons {
+    display: none !important;
+  }
+
+  .printable-page {
+    margin: 0 !important;
+  }
+}
+
+.report.printable-page {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  text-align: right;
+  font-family: var(--print-reports-font-family) !important;
+  font-size: var(--print-reports-font-size) !important;
+  font-weight: var(--print-reports-font-weight) !important;
+}
+
+.report.printable-page.page-a4 {
+  padding: 0 var(--print-reports-padding-right) 0 var(--print-reports-padding-left) !important;
+}
+
+.report.printable-page.page-roll-80 {
+  padding: var(--print-simplified-tax-invoice-padding-top) var(--print-simplified-tax-invoice-padding-right) var(--print-simplified-tax-invoice-padding-bottom) var(--print-simplified-tax-invoice-padding-left) !important;
+  font-size: var(--print-simplified-tax-invoice-font-size) !important;
+}
+
+.report.printable-page.page-roll-58 {
+  padding: var(--print-simplified-tax-invoice-padding-top) var(--print-simplified-tax-invoice-padding-right) var(--print-simplified-tax-invoice-padding-bottom) var(--print-simplified-tax-invoice-padding-left) !important;
+  font-size: var(--print-simplified-tax-invoice-font-size) !important;
+}
+
+.report.printable-page.page-roll-80 header > .d-flex {
+  flex-direction: column;
+}
+
+.report.printable-page table tr td,
+.report.printable-page table tr th {
+  padding: 0 var(--bs-spacer-1) !important;
+}
+

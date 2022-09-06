@@ -1,0 +1,46 @@
+$html-font-size: 16;
+
+@for $i from 0 through 100 {
+
+    .ht-#{0.5 * $i * 10},
+    .sz-#{0.5 * $i * 10} {
+        height: #{(0.5 * $i * 10 / $html-font-size)}rem;
+    }
+
+    .wd-#{0.5 * $i * 10},
+    .sz-#{0.5 * $i * 10} {
+        width: #{(0.5 * $i * 10 / $html-font-size)}rem;
+    }
+
+    // min
+
+    .min-ht-#{0.5 * $i * 10} {
+        min-height: #{(0.5 * $i * 10 / $html-font-size)}rem;
+    }
+
+    .min-wd-#{0.5 * $i * 10} {
+        min-width: #{(0.5 * $i * 10 / $html-font-size)}rem;
+    }
+
+    // max
+
+    .max-ht-#{0.5 * $i * 10} {
+        max-height: #{(0.5 * $i * 10 / $html-font-size)}rem;
+    }
+
+    .max-wd-#{0.5 * $i * 10} {
+        max-width: #{(0.5 * $i * 10 / $html-font-size)}rem;
+    }
+}
+
+$width-values: auto, max-content, min-content, fit-content;
+
+@each $val in $width-values {
+    .w-#{$val} {
+        width: $val;
+    }
+}
+
+.ht-form-control {
+    height: calc(1.6em + 0.875rem);
+}

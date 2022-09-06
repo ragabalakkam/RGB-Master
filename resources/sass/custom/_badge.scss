@@ -1,0 +1,58 @@
+@keyframes badge {
+  0% {
+    left: 0;
+  }
+  75% {
+    left: calc(100% + 10px);
+  }
+  100% {
+    left: -10px;
+  }
+}
+
+.badge-animation {
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgb(black, 0.2);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    height: 300%;
+    top: -100%;
+    width: 13%;
+    left: -10px;
+    background-color: var(--bs-white);
+    transform: rotate(45deg);
+    filter: blur(2px);
+    animation: badge 3s 2s infinite;
+  }
+}
+
+//
+
+.badge {
+  margin-bottom: 0.15rem;
+}
+
+.badge-sm {
+  font-size: 0.6rem;
+  padding: 0.25rem 0.35rem;
+}
+
+// BADGE COLORS
+
+.badge-info,
+.badge-primary {
+  color: $white;
+}
+
+.badge-danger,
+.badge-secondary,
+.badge-dark {
+  color: $light;
+}
+
+.badge-light {
+  color: $secondary;
+}

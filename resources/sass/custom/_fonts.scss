@@ -1,0 +1,44 @@
+/* font-weight */
+
+$font-weights: 300,
+600,
+900,
+'regular',
+'bold',
+'bolder';
+
+@each $weight in $font-weights {
+    .font-#{$weight} {
+        font-weight: #{$weight} !important;
+    }
+}
+
+
+/* font-size */
+
+$font-sizes: ('sm', 0.65),
+('md', 0.85),
+('lg', 1),
+('xl', 1.2),
+('xxl', 1.5);
+
+@each $abbr,
+$val in $font-sizes {
+    .font-#{$abbr} {
+        font-size: #{$val}rem !important;
+    }
+}
+
+@for $i from 1 through 20 {
+    .fs-#{$i} {
+        font-size: #{$i * 0.25}rem !important;
+    }
+}
+
+$families: Cairo, DroidKufi;
+
+@each $font-family in $families {
+    .font-#{$font-family} {
+        font-family: $font-family;
+    }
+}

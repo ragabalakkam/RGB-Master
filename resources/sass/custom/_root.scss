@@ -1,0 +1,12 @@
+:root {
+
+    @each $abbr, $time-val in $durations {
+        --duration-#{$abbr}: #{$time-val}s;
+    }
+
+    --#{$root-prefix}border: #efefef;
+
+    @each $index, $val in $spacers {
+        --#{$root-prefix}spacer-#{$index}: #{$val};
+    }
+}

@@ -1,0 +1,30 @@
+$overflow-values: visible,
+hidden,
+clip,
+scroll,
+auto,
+hidden visible,
+inherit,
+initial,
+unset;
+
+@each $val in $overflow-values {
+    .overflow-#{$val} {
+        overflow: $val;
+    }
+}
+
+.overflow-scroll,
+.no-scrollbars {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.prevent-refresh {
+    overscroll-behavior: contain;
+}

@@ -1,0 +1,36 @@
+@each $color-name, $color-value in map_merge($theme-colors, $colors) {
+    @for $i from 1 to 10 {
+        .text-#{$color-name}-#{$i},
+        .text-hover#{$color-name}-#{$i}:hover,
+        .text-focus#{$color-name}-#{$i}:focus {
+            color: rgba($color-value, $i/10);
+        }
+
+        .bg-#{$color-name}-#{$i},
+        .bg-hover#{$color-name}-#{$i}:hover,
+        .bg-focus#{$color-name}-#{$i}:focus {
+            background-color: rgba($color-value, $i/10);
+        }
+
+        .border-#{$color-name}-#{$i} {
+            border-color: rgba($color-value, $i/10);
+        }
+    }
+}
+
+.bg-hover-none:hover,
+.bg-focus-none:focus,
+.bg-all-none:hover,
+.bg-all-none:focus,
+.bg-all-none,
+.bg-none {
+    background-color: transparent;
+}
+
+.bg-img-none {
+    background: none;
+}
+
+.text-inherit {
+    color: inherit;
+}

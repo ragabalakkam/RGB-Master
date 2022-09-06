@@ -1,0 +1,15 @@
+$min-alpha: 1;
+$max-alpha: 10;
+
+@mixin color {
+    @each $name, $color in $colors {
+        @for $i from $min-alpha through $max-alpha {
+            $name: #{$name}#{if($i >= 10, "", "-#{$i}")} !global;
+            $color: if($i >= 10, $color, rgba($color, $i / 10)) !global;
+            @content;
+        }
+    }
+    $name: none !global;
+    $color: transparent !global;
+    @content;
+}

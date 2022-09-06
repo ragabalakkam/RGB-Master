@@ -1,0 +1,80 @@
+$border-value: 0.0625rem solid root_prefix('border');
+
+@include media {
+
+    /* border */
+
+    .border#{$breakpoint}-top,
+    .border#{$breakpoint} {
+        border-top: $border-value;
+    }
+
+    .border#{$breakpoint}-bottom,
+    .border#{$breakpoint} {
+        border-bottom: $border-value;
+    }
+
+    .border#{$breakpoint} {
+        border-left: $border-value;
+        border-right: $border-value;
+    }
+
+    @include dir {
+        .border#{$breakpoint}-left {
+            border-#{$left}: $border-value;
+        }
+
+        .border#{$breakpoint}-right {
+            border-#{$right}: $border-value;
+        }
+    }
+
+    /* border-radius */
+
+    $custom-rounded-values: ('sm', 0.2), ('md', 0.25), ('lg', 0.3), ('xl', 0.5), ('edges', 5);
+
+    @each $abbr, $val in $custom-rounded-values {
+        .rounded#{$breakpoint}-#{$abbr} {
+            border-radius: #{$val}rem;
+        }
+    }
+}
+
+/* border-color */
+
+@each $name, $val in $colors {
+    .border-#{$name} {
+        border-color: root_prefix($name) !important;
+    }
+}
+
+/* border-width */
+
+@each $num, $value in $spacers {
+    .border-#{$num} {
+        border-width: #{$value} !important;
+    }
+}
+
+@include dir {
+
+    .rounded-left-0 {
+        border-top-#{$left}-radius: 0;
+        border-bottom-#{$left}-radius: 0;
+    }
+
+    .rounded-right-0 {
+        border-top-#{$right}-radius: 0;
+        border-bottom-#{$right}-radius: 0;
+    }
+}
+
+.rounded-top-0 {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.rounded-bottom-0 {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}

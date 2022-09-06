@@ -1,0 +1,13 @@
+@each $color-name,
+$color-value in map_merge($theme-colors, $colors) {
+
+    .text-hover-#{$color-name}:hover,
+    .text-focus-#{$color-name}:focus {
+        color: var(--#{$root-prefix}#{$color-name});
+    }
+
+    .bg-hover-#{$color-name}:hover,
+    .bg-focus-#{$color-name}:focus {
+        background-color: root_prefix($color-name);
+    }
+}

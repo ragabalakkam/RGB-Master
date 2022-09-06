@@ -1,0 +1,104 @@
+html {
+    font-size: var(--font-size);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--color);
+    font-family: var(--font-family);
+}
+
+/* navbar */
+
+.navbar-light .navbar-toggler {
+    color: root_prefix('dark');
+    border-color: root_prefix('dark');
+}
+
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link,
+.dropdown-menu,
+.dropdown-item {
+    color: root_prefix('dark');
+}
+
+/* form-control */
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: root_prefix('primary');
+}
+
+.form-control {
+    border-color: root_prefix(border);
+}
+
+.table {
+    margin-bottom: 0;
+    color: inherit;
+}
+
+@include dir {
+    .dropdown-toggle::after {
+        margin-#{$left}: 0.25rem;
+    }
+}
+
+/* remove default margin-bottom */
+
+p {
+    margin-bottom: 0;
+}
+
+@for $i from 1 through 6 {
+
+    h#{$i},
+    .h#{$i} {
+        margin-bottom: 0;
+    }
+}
+
+label {
+    margin-bottom: 0.25rem;
+}
+
+.col-form-label {
+    padding-bottom: 0.25rem;
+}
+
+/* buttons */
+
+.btn-info {
+    color: root_prefix('light');
+}
+
+
+/* paragraph & headings margin-bottom */
+
+p {
+
+    @each $index,
+    $val in $spacers {
+        &.mb-#{$index} {
+            margin-bottom: var(--#{$root-prefix}spacer-#{$index});
+        }
+    }
+}
+
+@for $i from 1 through 6 {
+
+    h#{$i},
+    .h#{$i} {
+
+        @each $index,
+        $val in $spacers {
+            &.mb-#{$index} {
+                margin-bottom: var(--#{$root-prefix}spacer-#{$index});
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.report.printable-page {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  text-align: right;
+  font-family: var(--print-reports-font-family) !important;
+  font-size: var(--print-reports-font-size) !important;
+  font-weight: var(--print-reports-font-weight) !important;
+  
+  &.page-a4 {
+    padding: 0 var(--print-reports-padding-right) 0 var(--print-reports-padding-left) !important;
+  }
+  
+  &.page-roll-80 {
+    padding: var(--print-simplified-tax-invoice-padding-top)
+      var(--print-simplified-tax-invoice-padding-right)
+      var(--print-simplified-tax-invoice-padding-bottom)
+      var(--print-simplified-tax-invoice-padding-left) !important;
+    font-size: var(--print-simplified-tax-invoice-font-size) !important;
+  }
+  
+  &.page-roll-58 {
+    padding: var(--print-simplified-tax-invoice-padding-top)
+      var(--print-simplified-tax-invoice-padding-right)
+      var(--print-simplified-tax-invoice-padding-bottom)
+      var(--print-simplified-tax-invoice-padding-left) !important;
+    font-size: var(--print-simplified-tax-invoice-font-size) !important;
+  }
+
+  &.page-roll-80 header > .d-flex {
+    flex-direction: column;
+  }
+
+  table {
+    tr {
+      td,
+      th {
+        padding: 0 var(--bs-spacer-1) !important;
+      }
+    }
+  }
+}

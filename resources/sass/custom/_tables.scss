@@ -1,0 +1,8 @@
+@for $i from 1 through 5 {
+  .tbl-pd-#{$i} tr {
+    td,
+    th {
+      padding: var(--bs-spacer-#{$i}) !important;
+    }
+  }
+}

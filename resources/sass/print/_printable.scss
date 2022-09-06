@@ -1,0 +1,419 @@
+.printable-hidden {
+  position: absolute;
+  top: 102%;
+  left: 102%;
+}
+
+.printable-page {
+  background-color: $background-color !important;
+  color: $foreground-color !important;
+  font-family: $font-family !important;
+  font-size: $font-size !important;
+
+  // normalize #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  &,
+  * {
+    transition: none !important;
+    box-sizing: border-box;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // border #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  .border-top-dashed {
+    border-top: 1px dashed $border-color !important;
+  }
+  .border-bottom-dashed {
+    border-bottom: 1px dashed $border-color !important;
+  }
+  .border {
+    border: 1px solid var(--bs-black);
+  }
+  @each $dir in $dirs {
+    .border-#{$dir} {
+      border-#{$dir}: 1px solid $border-color;
+    }
+  }
+  .hr {
+    margin-bottom: var(--bs-spacer-4);
+    margin-top: var(--bs-spacer-4);
+  }
+  .border-2px {
+    border-width: 2px !important;
+  }
+
+  $rounded-values: ('sm', 0.2), ('md', 0.25), ('lg', 0.3), ('xl', 0.5), ('edges', 5);
+  @each $abbr, $val in $rounded-values {
+    .rounded-#{$abbr} {
+      border-radius: #{$val}em;
+    }
+  }
+
+  // paper sizes =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  &.page-a4 {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: var(--print-A4-width) !important;
+    height: var(--print-A4-height) !important;
+    // padding: $a4-padding !important;
+    font-size: $a4-font-size !important;
+    font-weight: $a4-font-weight !important;
+  }
+  &.page-roll-80 {
+    width: var(--print-Roll-80-width) !important;
+    padding: $roll-80-padding !important;
+    font-size: $roll-80-font-size !important;
+    font-weight: $roll-80-font-weight !important;
+  }
+  &.page-roll-58 {
+    width: var(--print-Roll-58-width) !important;
+    padding: $roll-58-padding !important;
+    font-size: $roll-58-font-size !important;
+    font-weight: $roll-58-font-weight !important;
+  }
+
+  // cut after page =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  &.cut-after-page,
+  .cut-after-page {
+    page-break-after: always !important;
+    border-bottom: 1px dashed black !important;
+  }
+
+  // #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  // borders #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  .border,
+  .border-left,
+  .border-right,
+  .border-top,
+  .border-bottom,
+  .table tr th,
+  .table tr td,
+  hr {
+    border-color: $border-color !important;
+  }
+
+  // table #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  .table:not(.not-table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: $table-margin;
+
+    thead:not(.bg-none) {
+      background-color: $thead-background-color;
+      color: $thead-color;
+    }
+
+    thead tr {
+      border-bottom: 2px solid $border-color;
+    }
+
+    tr {
+      th,
+      td {
+        border: 1px solid $border-color;
+        padding: $table-padding;
+      }
+    }
+
+    &.mb-0 {
+      margin: 0 !important;
+    }
+
+    &.table-borderless {
+      > thead > tr > th,
+      > thead > tr > td,
+      > thead > tr,
+      > tbody > tr > td,
+      > tfoot > tr > td {
+        border: 0;
+      }
+    }
+
+    &.p-0 {
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr > td {
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+  .table-collapse {
+    border-collapse: collapse;
+  }
+  .table td {
+    padding: unset;
+  }
+
+  // font-size #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  @each $abbr, $val in $font-sizes {
+    .font-#{$abbr} {
+      font-size: #{$val} !important;
+    }
+  }
+  @for $i from 1 through 8 {
+    .fs-#{$i} {
+      font-size: #{$i * 0.25 }em !important;
+    }
+  }
+
+  // font-weight #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  @each $weight in 300, 600, 900 {
+    .font-#{$weight} {
+      font-weight: #{$weight} !important;
+    }
+  }
+
+  // simplified tax invoice =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+  
+  &.standard-tax-invoice {
+
+    .table.products-table {
+      thead tr {
+        border-bottom: 2px solid $border-color;
+      }
+
+      tr {
+        text-align: center;
+
+        th,
+        td {
+          vertical-align: middle;          
+          &:not(:nth-child(2)) {
+            width: 10%;
+          }
+          &:last-child {
+            width: 12%;
+          }
+        }
+      }
+    }
+
+    .table.summary-table tr td {
+      &:nth-child(1) {
+        width: 40%;
+      }
+
+      &:nth-child(3) {
+        width: 12%;
+        text-align: center;
+      }
+    }
+  }
+
+  // simplified tax invoice =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  &.simplified-tax-invoice {
+    font-weight: 900 !important;
+  }
+
+  // sizes #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  .w-max-content {
+    width: max-content;
+  }
+  .w-auto {
+    width: auto;
+  }
+  .w-100 {
+    width: 100%;
+  }
+  .vw-100 {
+    width: 100vw;
+  }
+  .h-100 {
+    height: 100%;
+  }
+  .vh-100 {
+    height: 100vh;
+  }
+  .wd-30 {
+    width: 30px;
+  }
+  .wd-60 {
+    width: 60px;
+  }
+  .wd-85 {
+    width: 85px;
+  }
+
+  // padding & margin =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  @for $i from 0 through 5 {
+    // padding
+    .p-#{$i},
+    .px-#{$i},
+    .pr-#{$i} {
+      padding-right: var(--bs-spacer-#{$i});
+    }
+    .p-#{$i},
+    .px-#{$i},
+    .pl-#{$i} {
+      padding-left: var(--bs-spacer-#{$i});
+    }
+    .p-#{$i},
+    .py-#{$i},
+    .pb-#{$i} {
+      padding-bottom: var(--bs-spacer-#{$i});
+    }
+    .p-#{$i},
+    .py-#{$i},
+    .pt-#{$i} {
+      padding-top: var(--bs-spacer-#{$i});
+    }
+
+    // margin
+    .m-#{$i},
+    .mx-#{$i},
+    .mr-#{$i} {
+      margin-right: var(--bs-spacer-#{$i});
+    }
+    .m-#{$i},
+    .mx-#{$i},
+    .ml-#{$i} {
+      margin-left: var(--bs-spacer-#{$i});
+    }
+    .m-#{$i},
+    .my-#{$i},
+    .mb-#{$i} {
+      margin-bottom: var(--bs-spacer-#{$i});
+    }
+    .m-#{$i},
+    .my-#{$i},
+    .mt-#{$i} {
+      margin-top: var(--bs-spacer-#{$i});
+    }
+  }
+  .m-auto,
+  .mx-auto,
+  .mr-auto {
+    margin-right: auto;
+  }
+  .m-auto,
+  .mx-auto,
+  .ml-auto {
+    margin-left: auto;
+  }
+  .m-auto,
+  .my-auto,
+  .mb-auto {
+    margin-bottom: auto;
+  }
+  .m-auto,
+  .my-auto,
+  .mt-auto {
+    margin-top: auto;
+  }
+
+  // d-flex =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  .d-flex {
+    display: flex;
+  }
+  .flex-column {
+    flex-direction: column;
+  }
+  .align-items-center {
+    align-items: center;
+  }
+  @for $i from 1 through 5 {
+    .flex-#{$i} {
+      flex: $i;
+    }
+    .flex-gap-#{$i} {
+      gap: var(--bs-spacer-#{$i});
+    }
+  }
+
+  // colors =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  $theme-colors: (
+    "primary": #3490dc,
+    "secondary": #6c757d,
+    "success": #38c172,
+    "info": #6cb2eb,
+    "warning": #ffed4a,
+    "danger": #e3342f,
+    "light": #f8f9fa,
+    "dark": #343a40,
+    "none": transparent,
+  );
+
+  @each $name, $value in $theme-colors {
+    .bg-#{$name} {
+      background-color: $value;
+    }
+    @for $j from 1 through 9 {
+      .bg-#{$name}-#{$j} {
+        background-color: rgba($value, $j / 10);
+      }
+    }
+  }
+
+  // text align =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  .text-left {
+    text-align: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-center {
+    text-align: center;
+  }
+
+  // page number #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  counter-set: page;
+  #page-footer {
+    counter-increment: page;
+    
+    &::after {
+      content: counter(page);
+    }
+  }
+
+  // invoices / reports =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=
+
+  $sizes: 'standard-tax-invoice', 'simplified-tax-invoice', 'reports';
+  $props: 'padding-left', 'padding-right', 'font-family', 'font-size', 'font-weight', 'background-color', 'border-color', 'color';
+  @each $size in $sizes {
+    &.#{$size} {
+      @each $prop in $props {
+        #{$prop}: var(--print-#{$size}-#{$prop}) !important;
+      }
+    }
+  }
+}
+
+@media print {
+  .invoice,
+  .standard-tax-invoice,
+  .simplified-tax-invoice {
+    .action-buttons {
+      display: none !important;
+    }
+  }
+
+  .printable-page {
+    margin: 0 !important;
+  }
+}

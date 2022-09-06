@@ -1,0 +1,58 @@
+:root {
+    --bs-primary: #3490dc;
+    --bs-secondary: #6c757d;
+    --bs-success: #38c172;
+    --bs-info: #6cb2eb;
+    --bs-warning: #ffed4a;
+    --bs-danger: #e3342f;
+    --bs-light: #f8f9fa;
+    --bs-dark: #343a40;
+    --bs-blue: #3490dc;
+    --bs-indigo: #6574cd;
+    --bs-purple: #9561e2;
+    --bs-pink: #f66d9b;
+    --bs-red: #e3342f;
+    --bs-orange: #f6993f;
+    --bs-yellow: #ffed4a;
+    --bs-green: #38c172;
+    --bs-teal: #4dc0b5;
+    --bs-cyan: #6cb2eb;
+    --bs-white: #ffffff;
+    --bs-black: #000000;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-border: #dddddd;
+    --bs-x: #f2f4f6;
+    --bs-spacer-0: 0;
+    --bs-spacer-1: 0.25rem;
+    --bs-spacer-2: 0.5rem;
+    --bs-spacer-3: 1rem;
+    --bs-spacer-4: 1.5rem;
+    --bs-spacer-5: 3rem;
+    --bs-breakpoint-xs: 0;
+    --bs-breakpoint-sm: 576px;
+    --bs-breakpoint-md: 768px;
+    --bs-breakpoint-lg: 992px;
+    --bs-breakpoint-xl: 1200px;
+    --duration-fast: 0.05s;
+    --duration-med: 0.15s;
+    --duration-slow: 0.35s;
+    --font-family: Cairo;
+    --font-size: 14px;
+    --background-color: var(--bs-light);
+    --color: var(--bs-dark);
+    --home-from: #ebebeb;
+    --home-to: #64c5f6;
+    --home-dir: bottom;
+    --home-color: var(--bs-dark);
+}
+
+@font-face {
+    font-family: Cairo;
+    src: url(/fonts/Cairo.ttf);
+}
+
+@font-face {
+    font-family: DroidKufi;
+    src: url(/fonts/DroidKufi-Regular.woff);
+}
